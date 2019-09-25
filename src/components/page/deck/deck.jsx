@@ -3,10 +3,9 @@ import React from 'react';
 import Card from './card/card';
 
 const Deck = (props) => {
+  const {deck} = props;
 
-    const deck = props.deck;
-
-    return(
+  return (
 
         <React.Fragment>
 
@@ -21,7 +20,7 @@ const Deck = (props) => {
             </section>
 
         </React.Fragment>
-    )
+  );
 };
 
 export default Deck;

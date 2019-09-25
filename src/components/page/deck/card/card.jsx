@@ -3,10 +3,9 @@ import React from 'react';
 import Links from './links/links';
 
 const Card = (props) => {
+  const {card} = props;
 
-    let card = props.card;
-
-    return(
+  return (
         <React.Fragment>
             <div className={'card'}>
 
@@ -24,18 +23,16 @@ const Card = (props) => {
                 <nav className = 'links'>
                     <ul>
                         
-                        {card.links.map( (link, idx) => (
+                        {card.links.map((link, idx) => (
 
                             <Links link={ link } idx = { idx } />
-                        )
-
-                        )}
+                        ),)}
                     </ul>
 
                 </nav>
             </div>
         </React.Fragment>
-    );
+  );
 };
 
 export default Card;
